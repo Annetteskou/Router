@@ -8,7 +8,7 @@ export default defineConfig(({ command }) => {
   };
 
   if (command !== "serve") {
-    config.base = "/REACT-ROUTER/"; // produktion på GitHub Pages
+    config.base = "/Router/"; // produktion på GitHub Pages
   }
 
   return config;

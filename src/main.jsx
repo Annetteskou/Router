@@ -1,13 +1,15 @@
-import { StrictMode } from "react";
+// main.jsx or App.jsximport React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import "./index.css";
+import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter
+      basename={import.meta.env.DEV ? "/" : "/Router/"}
+    >
       <App />
     </BrowserRouter>
-  </StrictMode>
+  </React.StrictMode>
 );
